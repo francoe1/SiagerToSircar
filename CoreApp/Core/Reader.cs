@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 
-namespace SiagerToSircar.Core
+namespace CoreApp.Core
 {
     public class Reader<T> where T : new()
     {

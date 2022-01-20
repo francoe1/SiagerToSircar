@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SiagerToSircar.Core
+namespace CoreApp.Core
 {
     public enum WriteType
     {

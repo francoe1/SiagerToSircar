@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SiagerToSircar.Core
+namespace CoreApp.Core
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class SchemaPropertyAttribute : Attribute

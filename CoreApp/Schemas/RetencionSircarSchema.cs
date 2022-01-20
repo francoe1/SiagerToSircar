@@ -1,7 +1,7 @@
-﻿using SiagerToSircar.Core;
+﻿using CoreApp.Core;
 using System;
 
-namespace SiagerToSircar
+namespace CoreApp
 {
     [WriteType(WriteType.CSV)]
     public class RetencionSircarSchema : Schema

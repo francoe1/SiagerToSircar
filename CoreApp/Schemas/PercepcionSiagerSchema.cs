@@ -1,7 +1,7 @@
-﻿using SiagerToSircar.Core;
+﻿using CoreApp.Core;
 using System;
 
-namespace SiagerToSircar.Schemas
+namespace CoreApp.Schemas
 {
     public class PercepcionSiagerSchema : Schema
     {

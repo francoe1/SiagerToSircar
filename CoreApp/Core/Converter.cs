@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace SiagerToSircar.Core
+namespace CoreApp.Core
 {
     public class Converter<IN, OUT> where IN : Schema, new() where OUT : Schema, new()
     {

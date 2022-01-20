@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 
-namespace SiagerToSircar.Core
+namespace CoreApp.Core
 {
     public class Writer<T> where T : Schema, new()
     {

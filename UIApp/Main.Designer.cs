@@ -1,4 +1,4 @@
-﻿namespace SiagerToSircar
+﻿namespace UIApp
 {
     partial class Main
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this._btnPercepciones = new System.Windows.Forms.Button();
             this._btnRetenciones = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             this.Controls.Add(this._btnRetenciones);
             this.Controls.Add(this._btnPercepciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
