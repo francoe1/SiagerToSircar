@@ -17,3 +17,25 @@ Convertidor de datos SIAGER a SIRCAR
 ```text
 00001,1,1,002500011904,99993409391,28/12/2021,000147582.71,003.00,000004427.48,011,914
 ```
+
+Configurar datos desde `conf.ini`
+
+```ini
+#COMPROBANTES
+C_F=1
+C_ND=2
+C_R=3
+C_NC=102
+
+#Jusrisdicción
+TipoRegimenPercepcion=1
+JurisdiccionPercepcion=908
+TipoRegimenRetencion=1
+JurisdiccionRetencion=908
+```
+
+# CLI
+```cmd
+CoreApp.exe -p percepciones.txt
+CoreApp.exe -r retenciones.txt
+```
