@@ -33,13 +33,13 @@ namespace CoreApp.Schemas
         public long NumeroDeComprobante { get; set; }
 
         [SchemaProperty(67, 81, true)]
-        public decimal ImporteBase { get; set; }
+        public float ImporteBase { get; set; }
 
         [SchemaProperty(82, 87, true)]
-        public decimal Alicuota { get; set; }
+        public float Alicuota { get; set; }
 
         [SchemaProperty(88, 102, true)]
-        public decimal ImporteRetenido { get; set; }
+        public float ImporteRetenido { get; set; }
 
         [SchemaProperty(103, 103)]
         public int Anulacion { get; set; }

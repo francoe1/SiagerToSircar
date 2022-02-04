@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this._btnPercepciones = new System.Windows.Forms.Button();
             this._btnRetenciones = new System.Windows.Forms.Button();
+            this._calculateAlicuota = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // _btnPercepciones
@@ -59,11 +60,23 @@
             this._btnRetenciones.Text = "Retenciones (Siager > Sircard)";
             this._btnRetenciones.UseVisualStyleBackColor = true;
             // 
+            // _calculateAlicuota
+            // 
+            this._calculateAlicuota.AutoSize = true;
+            this._calculateAlicuota.Location = new System.Drawing.Point(13, 72);
+            this._calculateAlicuota.Name = "_calculateAlicuota";
+            this._calculateAlicuota.Size = new System.Drawing.Size(105, 17);
+            this._calculateAlicuota.TabIndex = 1;
+            this._calculateAlicuota.Text = "Calcular Alicuota";
+            this._calculateAlicuota.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this._calculateAlicuota.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 72);
+            this.ClientSize = new System.Drawing.Size(284, 101);
+            this.Controls.Add(this._calculateAlicuota);
             this.Controls.Add(this._btnRetenciones);
             this.Controls.Add(this._btnPercepciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -74,6 +87,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Siager a Sircar";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,6 +95,7 @@
 
         private System.Windows.Forms.Button _btnPercepciones;
         private System.Windows.Forms.Button _btnRetenciones;
+        private System.Windows.Forms.CheckBox _calculateAlicuota;
     }
 }
 

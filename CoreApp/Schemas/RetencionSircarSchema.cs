@@ -25,13 +25,13 @@ namespace CoreApp
         public DateTime FechaDeRetencion { get; set; }
 
         [SchemaProperty(42, 53, LeftPad = true, PadChar = '0')]
-        public decimal MontoSujectoARetencion { get; set; }
+        public float MontoSujectoARetencion { get; set; }
 
         [SchemaProperty(54, 59, LeftPad = true, PadChar = '0')]
-        public decimal Alicuota { get; set; }
+        public float Alicuota { get; set; }
 
         [SchemaProperty(60, 71, LeftPad = true, PadChar = '0')]
-        public decimal MontoRetenido { get; set; }
+        public float MontoRetenido { get; set; }
 
         [SchemaProperty(72, 74, LeftPad = true, PadChar = '0')]
         public int TipoDeRegimen { get; set; }

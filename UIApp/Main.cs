@@ -28,7 +28,7 @@ namespace UIApp
             {
                 if (file != null)
                 {
-                    var convert = ConvertHelpers.Retenciones_SIAGER_SIRCAR(file);
+                    var convert = ConvertHelpers.Retenciones_SIAGER_SIRCAR(file, _calculateAlicuota.Checked);
                     MessageBox.Show($"Se procesaron {convert.Output.Length} registros");
                 }
             }
@@ -56,7 +56,7 @@ namespace UIApp
             {
                 if (file != null)
                 {
-                    var convert = ConvertHelpers.Percepciones_SIAGER_SIRCAR(file);
+                    var convert = ConvertHelpers.Percepciones_SIAGER_SIRCAR(file, _calculateAlicuota.Checked);
                     MessageBox.Show($"Se procesaron {convert.Output.Length} registros");
                 }
             }

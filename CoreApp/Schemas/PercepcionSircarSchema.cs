@@ -25,13 +25,13 @@ namespace CoreApp.Schemas
         public DateTime FechaDePercepcion { get; set; }
 
         [SchemaProperty(44, 56, true)]
-        public decimal MontoSujetoAPercepcion { get; set; }
+        public float MontoSujetoAPercepcion { get; set; }
 
         [SchemaProperty(57, 62, true)]
-        public decimal Alicuota { get; set; }
+        public float Alicuota { get; set; }
 
         [SchemaProperty(63, 75, true)]
-        public decimal MontoPercibido { get; set; }
+        public float MontoPercibido { get; set; }
 
         [SchemaProperty(76, 78, LeftPad = true, PadChar = '0')]
         public int TipoDeRegimen { get; set; }

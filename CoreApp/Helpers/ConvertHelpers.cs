@@ -1,10 +1,16 @@
 ﻿using CoreApp.Schemas;
+using System;
 
 namespace CoreApp.Helpers
 {
     public static class ConvertHelpers
     {
-        public static Core.Converter<PercepcionSiagerSchema, PercepcionSircarSchema> Percepciones_SIAGER_SIRCAR(string pathIn)
+        private static float ParseIVA(float value)
+        {
+            return (float)Math.Round((decimal) (100f / value));
+        }
+
+        public static Core.Converter<PercepcionSiagerSchema, PercepcionSircarSchema> Percepciones_SIAGER_SIRCAR(string pathIn, bool calculateAlicuota)
         {
             int GetComprobanteTipoSircar(string tipo)
             {
@@ -23,7 +29,7 @@ namespace CoreApp.Helpers
                     CuitDelContribuyente = schema.CuitDelProveedor,
                     FechaDePercepcion = schema.FechaPercepcion,
                     MontoSujetoAPercepcion = schema.ImporteBase,
-                    Alicuota = schema.Alicuota,
+                    Alicuota = calculateAlicuota ? ParseIVA(schema.ImporteBase / schema.ImportePercibido) : schema.Alicuota,
                     MontoPercibido = schema.ImportePercibido,
                     TipoDeRegimen = Config.ReadInt("TipoRegimenPercepcion", -1),
                     Jurisdiccion = Config.ReadInt("JurisdiccionPercepcion", -1)
@@ -33,7 +39,7 @@ namespace CoreApp.Helpers
             return new Core.Converter<PercepcionSiagerSchema, PercepcionSircarSchema>(pathIn, PathHelpers.GetOutPath(pathIn, "-sircar"), FilledPercepcion);
         }
 
-        public static Core.Converter<RetencionSiagerSchema, RetencionSircarSchema> Retenciones_SIAGER_SIRCAR(string pathIn)
+        public static Core.Converter<RetencionSiagerSchema, RetencionSircarSchema> Retenciones_SIAGER_SIRCAR(string pathIn, bool calculateAlicuota)
         {
             RetencionSircarSchema FilledPercepcion(int num, RetencionSiagerSchema schema)
             {
@@ -46,7 +52,7 @@ namespace CoreApp.Helpers
                     CuitDelContribuyente = schema.CUITProveedor,
                     FechaDeRetencion = schema.FechaDeLaRetencion,
                     MontoSujectoARetencion = schema.ImporteBase,
-                    Alicuota = schema.Alicuota,
+                    Alicuota = calculateAlicuota ? ParseIVA(schema.ImporteBase / schema.ImporteRetenido) : schema.Alicuota,
                     MontoRetenido = schema.ImporteRetenido,
                     TipoDeRegimen = Config.ReadInt("TipoRegimenRetencion", -1),
                     Jurisdiccion = Config.ReadInt("JurisdiccionRetencion", -1)

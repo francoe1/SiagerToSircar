@@ -17,13 +17,13 @@ namespace CoreApp
 
                     if (args[0] == "-p")
                     {
-                        Core.Converter<PercepcionSiagerSchema, PercepcionSircarSchema> convert = ConvertHelpers.Percepciones_SIAGER_SIRCAR(path);
+                        Core.Converter<PercepcionSiagerSchema, PercepcionSircarSchema> convert = ConvertHelpers.Percepciones_SIAGER_SIRCAR(path, false);
                         foreach (string output in convert.Output) Console.WriteLine(output);
                         return;
                     }
                     else if (args[0] == "-r")
                     {
-                        Core.Converter<PercepcionSiagerSchema, PercepcionSircarSchema> convert = ConvertHelpers.Percepciones_SIAGER_SIRCAR(path);
+                        Core.Converter<RetencionSiagerSchema, RetencionSircarSchema> convert = ConvertHelpers.Retenciones_SIAGER_SIRCAR(path, false);
                         foreach (string output in convert.Output) Console.WriteLine(output);
                         return;
                     }

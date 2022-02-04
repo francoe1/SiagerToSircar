@@ -27,13 +27,13 @@ namespace CoreApp.Schemas
         public long NumeroDeComprobante { get; set; }
 
         [SchemaProperty(45, 59, true)]
-        public decimal ImporteBase { get; set; }
+        public float ImporteBase { get; set; }
 
         [SchemaProperty(60, 65, true)]
-        public decimal Alicuota { get; set; }
+        public float Alicuota { get; set; }
 
         [SchemaProperty(66, 80, true)]
-        public decimal ImportePercibido { get; set; }
+        public float ImportePercibido { get; set; }
 
         [SchemaProperty(81, 81)]
         public int Anulacion { get; set; }
